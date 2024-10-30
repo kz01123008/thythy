@@ -1,7 +1,11 @@
 import React from 'react';
 import './Testimonials.css';
-import Image3 from '../../assets/avatar-3.svg'
-import Image4 from '../../assets/avatar-4.svg'
+import Image3 from '../../assets/avatar-3.svg';
+import Image4 from '../../assets/nk1.JPG';
+import Image5 from '../../assets/nk2.JPG';
+import Image6 from '../../assets/nk3.jpg';
+import Image7 from '../../assets/nk4.JPG';
+import Image8 from '../../assets/nk5.jpg';
 
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,24 +18,65 @@ const Testimonials = () => {
 	const data = [
 		{
 			id: 1,
-			image: Image4,
-			title: "Kerren Ortlepp",
-			subtitle: "Founder @ Entrostat",
-			comment: "Greg worked at Entrostat as a full-stack developer. He was excellent and had a real eye for design. If there was ever a time where we had a complicated frontend or needed to know what the best CSS approach was for something - Greg was our goto man!",
+			image: Image3,
+			title: "Tran Hoang Thy Thy",
+			comment: (
+				<>
+					<img src={Image4} alt="Example" className="comment__image" />
+					Psychological pressure workshop activity hall
+				</>
+			),
 		},
 		{
 			id: 2,
 			image: Image3,
-			title: "Thapelo Kekana",
-			subtitle: "Frontend Developer @ FNB",
-			comment: "I enjoy working with the theme and learn so much. You guys make the process fun and interesting. Good luck! 👍",
+			title: "Tran Hoang Thy Thy",
+			comment: (
+				<>
+					<img src={Image5} alt="Example" className="comment__image" />
+					Cu Chi Province
+				</>
+			),
+		},
+		{
+			id: 3,
+			image: Image3,
+			title: "Tran Hoang Thy Thy",
+			comment: (
+				<>
+					<img src={Image6} alt="Example" className="comment__image" />
+					Gia Lai 2023
+				</>
+			),
+		},
+		{
+			id: 4,
+			image: Image4,
+			title: "Tran Hoang Thy Thy",
+			comment: (
+				<>
+					<img src={Image7} alt="Example" className="comment__image" />
+					Gia Lai 2024
+				</>
+			),
+		},
+		{
+			id: 5,
+			image: Image4,
+			title: "Tran Hoang Thy Thy",
+			comment: (
+				<>
+					<img src={Image8} alt="Example" className="comment__image" />
+					Rotaract Saigon
+				</>
+			),
 		},
 	];
 
 	return (
 		<section className="testimonials container section">
 
-			<h2 className="section__title">Testimonials</h2>
+			<h2 className="section__title">Extracurricular</h2>
 
 			<Swiper className="testimonial__container grid"
 				modules={[Pagination]}
@@ -40,14 +85,13 @@ const Testimonials = () => {
 				loop={true}
 				grabCursor={true}
 				pagination={{ clickable: true }}>
-				{data.map(({ id, image, title, subtitle, comment }) => {
+				{data.map(({ id, image, title, comment }) => {
 					return (
 						<SwiperSlide className="testimonial__item" key={id}>
 							<div className="thumb">
 								<img src={image} alt="" />
 							</div>
 							<h3 className="testimonial__title">{title}</h3>
-							<span className="subtitle">{subtitle}</span>
 							<div className="comment">{comment}</div>
 						</SwiperSlide>
 					)
@@ -57,4 +101,4 @@ const Testimonials = () => {
 	)
 }
 
-export default Testimonials
+export default Testimonials;

@@ -20,7 +20,7 @@ const Home = () => {
             margin: "20px 0",
           }}
         >
-          {/* <HeaderSocials /> */}
+          <HeaderSocials />
         </div>
 
         <a href="#contact" className="btn">
